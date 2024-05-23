@@ -1,0 +1,21 @@
+.todo-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .todo-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .todo-list li.completed label {
+    text-decoration: line-through;
+  }
+  
+  .todo-list input[type="checkbox"] {
+    margin-right: 10px;
+  }

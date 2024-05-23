@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
+import './AddTarea.css';
 
-function AddTarea({ addTodo }) {
+function AddTarea({ setTodos, todos }) {
   const [inputValue, setInputValue] = useState('');
-
   const handleAddTodo = () => {
-    addTodo(inputValue);
+    if (inputValue !== '') {
+      setTodos([
+        ...todos, 
+        {
+          text: inputValue,
+          completed: false,
+          createdAt: Date.now(),
+          completedAt: null,
+        }]);  
+    }
     setInputValue('');
   };
 
   return (
-    <div>
+    <div className='add-tarea'>
       <input 
         type="text" 
         value={inputValue} 
@@ -21,3 +30,4 @@ function AddTarea({ addTodo }) {
 }
 
 export default AddTarea;
+
