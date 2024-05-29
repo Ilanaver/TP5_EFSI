@@ -12,9 +12,11 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-
+body{
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fminions.fandom.com%2Fes%2Fwiki%2FMinions&psig=AOvVaw3T-VJvXx2H6nKpuT9vPljY&ust=1717069419169000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLiDtZjksoYDFQAAAAAdAAAAABAE');
+}
 .one-half {
-  flex: 0 0 50%;
+  flex: 0 0 100%;
   padding: 0 15px;
 }
 

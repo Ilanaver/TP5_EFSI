@@ -8,7 +8,9 @@ function Eliminar({ setTodos, todos, index }) {
   };
 
   return (
-    <button className="delete-btn" onClick={deleteTodo}>Eliminar</button>
+    <button onClick={deleteTodo}>
+      Eliminar
+    </button>
   );
 }
 

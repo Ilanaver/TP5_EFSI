@@ -7,11 +7,17 @@ function Tareas({ todos, setTodos }) {
   return (
     <div>
       {todos.map((todo, index) => (
-        <div className='todo-list' key={index} style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
-          <span>{todo.text} (Creado: {new Date(todo.createdAt).toLocaleString()})</span>
-          {todo.completed && <span> (Completado: {new Date(todo.completedAt).toLocaleString()})</span>}
-          <Completa setTodos={setTodos} todos={todos} index={index} />
-          <Eliminar setTodos={setTodos} todos={todos} index={index}/>
+        <div className='todo-item' key={index}>
+          <span className={todo.completed ? 'completed' : 'null'}>
+            {todo.text} (creado el {new Date(todo.createdAt).toLocaleString()})
+            {todo.completed && (
+              <span> - completado el {new Date(todo.completedAt).toLocaleString()}</span>
+            )}
+          </span>
+          <div className='botones'>
+            <Completa setTodos={setTodos} todos={todos} index={index} />
+            <Eliminar setTodos={setTodos} todos={todos} index={index}/>
+          </div>
         </div>
       ))}
     </div>

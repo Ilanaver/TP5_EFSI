@@ -1,4 +1,5 @@
 import React from 'react';
+import './Completa.css'
 
 function Completa({ setTodos, todos, index }) {
   const toggleComplete = () => {
@@ -10,7 +11,7 @@ function Completa({ setTodos, todos, index }) {
 
   return (
     <button onClick={toggleComplete}>
-      {todos[index].completed ? 'Marcar como Incompleta' : 'Marcar como Completada'}
+      {todos[index].completed ? 'Desmarcar' : 'Completar'}
     </button>
   );
 }

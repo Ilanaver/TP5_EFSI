@@ -1,21 +1,29 @@
 .todo-list {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-  }
-  
-  .todo-list li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .todo-list li.completed label {
-    text-decoration: line-through;
-  }
-  
-  .todo-list input[type="checkbox"] {
-    margin-right: 10px;
-  }
+  list-style: none;
+  padding: 0;
+  width: 120%;
+}
+
+.todo-item {
+  padding: 10px;
+  border: 1px solid #fa8072;
+}
+
+.todo-item .completed {
+  text-decoration: line-through;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.todo-item span {
+  flex-grow: 1;
+  margin-bottom: 5px;
+}

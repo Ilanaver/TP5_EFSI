@@ -6,7 +6,10 @@ function Rapida({ todos }) {
 
   const getFastestTodo = () => {
     const completedTodos = todos.filter(todo => todo.completed && todo.completedAt);
-    if (completedTodos.length === 0) return null;
+    if (completedTodos.length === 0) {
+      alert('No hay tareas completadas aún.');
+      return null;
+    }
 
     let fastestTodo = completedTodos[0];
     completedTodos.forEach(todo => {
@@ -18,14 +21,22 @@ function Rapida({ todos }) {
     return fastestTodo;
   };
 
-  const getFastestTodoClick = () => {
-    const fastest = getFastestTodo();
-    setFastestTodo(fastest);
+  const handleButtonClick = () => {
+    if (fastestTodo) {
+      setFastestTodo(null);
+    } else {
+      const fastest = getFastestTodo();
+      setFastestTodo(fastest);
+    }
   };
 
   return (
-    <div className='rapido'>
-      <button onClick={getFastestTodoClick}>Rapido</button>
+    <div className='rapida'>
+      <div className='boton'>
+        <button onClick={handleButtonClick}>
+          {fastestTodo ? 'Ocultar' : 'Rápido'}
+        </button>
+      </div>
       {fastestTodo && (
         <div className='fastest-task'>
           <h2>Tarea completada más rápido:</h2>

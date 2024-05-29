@@ -1,11 +1,11 @@
 .rapida {
-  margin-top: 20px;
+  margin-top: 0px;
   text-align: center;
 }
 
 .rapida button {
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #FA8072	;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -14,13 +14,19 @@
 }
 
 .rapida button:hover {
-  background-color: #0056b3;
+  background-color: #d66d62;
 }
 
 .fastest-task {
-  margin-top: 20px;
+  margin-top: 15px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #f1f1f1;
+}
+
+.boton {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
 }
